@@ -43,7 +43,7 @@ int main() {
         if (client_fd < 0) continue;
         
         // Simple HTTP response
-        std::string body = "Served by backend: " + container_id + "\n";
+        std::string body = "Served by backend: " + std::string(hostname) + "\n";
         
         std::string response =
             "HTTP/1.1 200 OK\r\n"
